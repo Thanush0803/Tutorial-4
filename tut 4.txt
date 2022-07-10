@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<math.h>                                                //Header for mathematical operations
+int main()
+{
+    int p[10], q[10];                                           //p and q are collection of vectors                    
+    int r[10],s[10];                                            //r is for addition of vetors and s for magnitude
+    int i,E=0;                                                  //i for loop and E for angle
+    float magnitude,angle,A,B,C;
+    printf("Enter elements of vector p:\n");
+    for(i = 0; i < 2; i++)                                      
+    scanf("%d", &p[i]);
+    printf("Enter elements of vector q:\n");
+    for(i = 0; i < 2; i++)
+    scanf("%d", &q[i]);
+    for (i = 0; i < 2; i++)
+      r[i] = p[i] + q[i];
+    printf("Addition vector:");
+    for (i = 0; i< 2; i++)
+      printf("%d ", r[i]);
+      magnitude=sqrt(pow(r[0],2)+pow(r[1],2));                   //pow for power function and sqrt for square root
+      printf("\nMagnitude of r vector is %f\n",magnitude);       //hence its for magnitude
+      for(i=0;i<2;i++)
+      {
+          s[i]=p[i]*q[i];
+          E=E+s[i];
+      }
+     
+      A=sqrt(pow(p[0],2)+pow(p[1],2));        
+       printf("%f\n",B);
+      B=sqrt(pow(q[0],2)+pow(q[1],2));        
+       printf("%f\n",B);
+      C=A*B;                                                    
+       angle=E/C;
+       printf("angle between the vector is cos θ = %f",angle);    //hence its for angle
+     
+   
+}
